@@ -1,0 +1,28 @@
+Some of the key STL algorithms available in C++98 include:
+
+std::find:
+Searches for an element in a range and returns an iterator pointing to the first occurrence.
+
+std::find_if:
+Searches for an element in a range based on a given predicate and returns an iterator.
+
+std::sort:
+Sorts the elements in a range.
+
+std::reverse:
+Reverses the elements in a range.
+
+std::count:
+Counts the occurrences of a specific value in a range.
+
+std::copy:
+Copies elements from one range to another.
+
+std::transform:
+Applies a function to each element in a range and stores the results in another range.
+
+std::accumulate:
+Calculates the sum of elements in a range.
+
+std::for_each:
+Applies a function to each element in a range.
