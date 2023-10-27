@@ -24,7 +24,15 @@ class Span
 		int		shortestSpan();
 		int		longestSpan();
 
-		void	addManyNumbers(unsigned int amount);
+		template <typename Iterator>
+		void	addManyNumbers(Iterator begin, Iterator end)
+		{
+			while (begin != end && numbers.size() < max)
+			{
+				addNumber(*begin);
+				++begin;
+			}
+		}
 };
 
 class MyException : public std::exception 

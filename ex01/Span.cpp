@@ -51,16 +51,3 @@ int	Span::longestSpan()
 	std::sort(numbers.begin(), numbers.end());
 	return numbers.back() - numbers.front();
 }
-
-void Span::addManyNumbers(unsigned int amount)
-{
-	if (amount >= max)
-		throw MyException("Amount of numbers cannot exceed maximum capacity");
-	std::srand(std::time(0));
-	for (unsigned int i = 0; i < amount; ++i)
-	{
-		int randomNum = std::rand() % 10000 + 1;
-		addNumber(randomNum);
-		std::cout << randomNum << " ";
-	}
-}
