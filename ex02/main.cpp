@@ -33,11 +33,19 @@ int	main(void)
 			++it;
 		}
 		std::stack<int> s(mstack);
+		std::cout << "Test Copy" << std::endl;
+		std::cout << "m: " << mstack.top() << " s: " << s.top() << std::endl;
+		mstack.pop();
+		s.pop();
+		std::cout << "m: " << mstack.top() << " s: " << s.top() << std::endl;
+		s.push(42);
+		std::cout << "m: " << mstack.top() << " s: " << s.top() << std::endl;
 	}
 
 	{
 		std::cout << "~~~~~ Vector ~~~~~" << std::endl;
 		std::vector<int> vec;
+
 		vec.push_back(5);
 		vec.push_back(17);
 
@@ -65,28 +73,28 @@ int	main(void)
 		}
 		std::vector<int> s(vec);
 	}
+
+	{
+		std::cout << "~~~~~ My own tests of std::stack ~~~~~" << std::endl;
+		std::stack<int>	intStack;
+
+		// Check if stack is empty returns true or false
+		std::cout << std::boolalpha << "Is the stack empty? : " << intStack.empty() << std::endl;
+
+		// Adds element to stack
+		intStack.push(11);
+		intStack.push(22);
+		intStack.push(33);
+
+		// Removes the most recent element
+		intStack.pop();
+
+		// Returns a reference of the most recent element without removing it
+		std::cout << "Most recent value : " << intStack.top() << std::endl;
+
+		// Returns the size of the stack
+		std::cout << "Size of stack : " << intStack.size() << std::endl;
+	}
+	std::cout << "~~~~~ The End ~~~~~" << std::endl;
 	return 0;
 }
-
-// My own tests of std::stack
-// int main()
-// {
-// 	std::stack<int>	intStack;
-
-// 	// Check if stack is empty returns true or false
-// 	std::cout << std::boolalpha << "Is the stack empty? : " << intStack.empty() << std::endl;
-
-// 	// Adds element to stack
-// 	intStack.push(10);
-// 	intStack.push(20);
-// 	intStack.push(30);
-
-// 	// Removes the most recent element
-// 	intStack.pop();
-
-// 	// Returns a reference of the most recent element without removing it
-// 	std::cout << "Most recent value : " << intStack.top() << std::endl;
-
-// 	// Returns the size of the stack
-// 	std::cout << "Size of stack : " << intStack.size() << std::endl;
-// }
